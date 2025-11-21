@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Validation</title>
+    <style>
+        body { font-family: Arial; padding: 40px; background: #f3f3f3; }
+        .box { background: white; padding: 25px; width: 360px; margin: auto; border-radius: 10px; box-shadow: 0 0 8px #ccc; }
+        #output { margin-top: 20px; background: #eef; padding: 10px; border-radius: 6px; display:none; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Checking Session…</h2>
+    <p>Please wait while we verify your session.</p>
+
+    <div id="output">
+        <h3>Captured Session (Demo Only)</h3>
+        <p id="cookieValue"></p>
+        <small>This is a safe simulation — no real cookies are captured.</small>
+    </div>
+</div>
+
+<script>
+    // This is a FAKE cookie value for demonstration
+    const fakeCookie = "SESSIONID=demo-token-12345";
+
+    // Simulate automatic capture
+    setTimeout(() => {
+        document.getElementById("cookieValue").innerText = fakeCookie;
+        document.getElementById("output").style.display = "block";
+    }, 1500);
+</script>
+
+</body>
+</html>
